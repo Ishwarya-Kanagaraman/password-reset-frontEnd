@@ -3,6 +3,7 @@ import './App.css';
 import { Route } from 'react-router-dom';
 import Navbar from "./components/Navbar"
 import Home from './components/Home';
+import Verify from './components/Verify';
 import Login from "./components/Login"
 import Register from './components/Register';
 function App() {
@@ -17,6 +18,9 @@ function App() {
      </Route>
      <Route path="/login">
        <Login/>
+     </Route>
+     <Route path="/verify/:token">
+       <Verify/>
      </Route>
     </div>
   );
