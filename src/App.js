@@ -3,7 +3,7 @@ import './App.css';
 import { Route } from 'react-router-dom';
 import Navbar from "./components/Navbar"
 import Home from './components/Home';
-import Verify from './components/Verify';
+// import Verify from './components/Verify';
 import Login from "./components/Login"
 import Register from './components/Register';
 import ResetPassword from './components/ResetPassword';
@@ -21,13 +21,13 @@ function App() {
      <Route path="/login">
        <Login/>
      </Route>
-     <Route path="/verify/:token">
+     {/* <Route path="/verify/:token">
        <Verify/>
-     </Route>
+     </Route> */}
      <Route path="/forgot-password">
      <ForgotPassword/>
      </Route>
-     <Route path="/reset-password">
+     <Route exact path="/forgot-password/:token">
      <ResetPassword/>
      </Route>
     </div>

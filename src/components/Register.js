@@ -26,7 +26,7 @@ export default function Register() {
     })
     .then(res=>res.json())
     .then(res=>console.log(res,res.message))
-    // window.alert('Please check the  Email  to activate your account.')
+    window.alert('Registration success. Please check the  Email  to activate your account.')
   
   
   }
