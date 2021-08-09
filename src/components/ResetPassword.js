@@ -1,14 +1,13 @@
 import React,{useState} from 'react'
-import { useParams } from 'react-router';
+
 import './register.css'
 export default function ResetPassword() {
-   const {token}=useParams();
     const [message,setMessage]=useState('');
     const [newPassword,setNewPassword]=useState('');
     
    const handleReset=()=>{
     const userData={
-        token,
+      
         newPassword
     }
     console.log(userData)
