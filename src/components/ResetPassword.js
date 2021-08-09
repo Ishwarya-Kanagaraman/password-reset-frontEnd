@@ -29,8 +29,8 @@ export default function ResetPassword() {
             <div className="row">
               <div  className="col-md-6 col-sm-12">
               <th>
-                  <label htmlFor="FirstName">
-                    <h3>Password:</h3>
+                  <label htmlFor="FirstName" placeholder="Enter new password">
+                    <h3>New Password:</h3>
                   </label>
                 </th>
               </div>

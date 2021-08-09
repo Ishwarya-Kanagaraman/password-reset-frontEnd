@@ -57,7 +57,7 @@ export default function ForgotPassword() {
             <div className="row">
                 <div className="col-md-2 col-sm-12"></div>
                 <div className="col-md-8 col-sm-12">
-                    <button type="button" onClick={handleForgotPassword}className="btn btn-block btn-success">Reset Password</button>
+                    <button type="button" onClick={handleForgotPassword}className="btn btn-block btn-success">Submit</button>
                 </div>
                 <div className="col-md-2 col-sm-12"></div>
             </div>
