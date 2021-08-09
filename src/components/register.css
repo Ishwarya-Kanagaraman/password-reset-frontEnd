@@ -60,3 +60,18 @@ button{
         padding:7px 0px;
     }
 }
+.message{
+    font-family: 'Lobster', cursive;
+    letter-spacing: 2px;
+    /* font-family: 'Inconsolata', monospace; */
+        padding:20px;
+        font-size: 42px;
+        background: -webkit-linear-gradient(rgb(10, 233, 177), rgb(11, 107, 3));
+        background-clip:text;
+        font-weight: 500;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        /* max-width:500px; */
+        text-align: center;
+      
+}

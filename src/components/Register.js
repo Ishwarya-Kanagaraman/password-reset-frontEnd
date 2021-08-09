@@ -8,86 +8,33 @@ export default function Register() {
   const [password ,setPassword ]=useState('');
   const [mobileNo,setMobileNo ]=useState('');
   const handleRegister=()=>{
-    const user={
+    const createUser={
       firstName,
       lastName,
       email,
       password,
       mobileNo
     }
-    console.log(user);
+    console.log(createUser);
     fetch('https://password-reset-my-server.herokuapp.com/signup',
     { 
       method:"POST",
       headers:{
-        "Content-Type":"application/json"
+        "Content-type":"application/json",
       },
-      body:JSON.stringify(user)
+      body:JSON.stringify(createUser)
     })
+    .then(res=>res.json())
+    .then(res=>console.log(res,res.message))
+    // window.alert('Please check the  Email  to activate your account.')
+  
+  
   }
   return (
     <div className="container-fluid">
       <div className="row">
         {/* <div className="col-md-3 col-sm-12"></div> */}
         <div className="col-md-8 col-sm-12 form">
-          {/* <table>
-            <tr>
-              <th>
-                <label htmlFor="FirstName">
-                  <h3>First Name:</h3>
-                </label>
-              </th>
-              <td>
-                {" "}
-                <input type="text" />
-              </td>
-            </tr>
-            <tr>
-              <th>
-                {" "}
-                <label htmlFor="lastName">
-                  <h3>Last Name:</h3>
-                </label>
-              </th>
-              <td>
-                <input type="text" />
-              </td>
-            </tr>
-            <tr>
-              <th>
-                {" "}
-                <label htmlFor="Email">
-                  <h3>Email:</h3>
-                </label>
-              </th>
-              <td>
-                <input type="text" />
-              </td>
-            </tr>
-            <tr>
-              <th>
-                {" "}
-                <label htmlFor="Password">
-                  <h3>Password:</h3>
-                </label>
-              </th>
-              <td>
-                {" "}
-                <input type="password" />
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <label htmlFor="Mobile">
-                  <h3>Mobile:</h3>
-                </label>
-              </th>
-              <td>
-                {" "}
-                <input type="number" />
-              </td>
-            </tr>
-          </table> */}
           <div className="row">
             <div  className="col-md-6 col-sm-12">
             <th>

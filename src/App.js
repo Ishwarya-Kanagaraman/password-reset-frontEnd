@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Verify from './components/Verify';
 import Login from "./components/Login"
 import Register from './components/Register';
+import ForgotPassword from './components/ForgotPassword';
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,12 @@ function App() {
      </Route>
      <Route path="/verify/:token">
        <Verify/>
+     </Route>
+     <Route path="/forgot-password">
+     <ForgotPassword/>
+     </Route>
+     <Route path="/reset-password">
+     <ForgotPassword/>
      </Route>
     </div>
   );
