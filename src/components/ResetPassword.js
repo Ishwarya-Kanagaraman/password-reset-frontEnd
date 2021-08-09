@@ -12,7 +12,7 @@ export default function ResetPassword() {
         newPassword
     }
     console.log(userData)
-     fetch("https://password-reset-my-server.herokuapp.com/reset-password", {
+     fetch("https://password-reset-my-server.herokuapp.com/reset-password/:token", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
