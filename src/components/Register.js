@@ -7,6 +7,7 @@ export default function Register() {
   const [email,setEmail]=useState('');
   const [password ,setPassword ]=useState('');
   const [mobileNo,setMobileNo ]=useState('');
+  const [message,setMessage]=useState('');
   const handleRegister=()=>{
     const createUser={
       firstName,
@@ -29,7 +30,7 @@ export default function Register() {
     })
     .then(res=>res.json())
     // .then(res=>res.status===402 ? console.log(res.message):console.log('success'))
-    .then(res=>console.log(res,res.message))
+    .then(res=>setMessage(res.message))
     // .then(window.alert('Registration success. Please check the  Email  to activate your account.'))
   
   
@@ -127,6 +128,11 @@ export default function Register() {
                   <Link className="loginLink" to="/login">Already Have an Account? Login </Link>
               </div>
               {/* <div className="col-md-2 col-sm-12"></div> */}
+          </div>
+          <div className="row">
+            <div className="col-sm-12 col-md-12">
+              <h2 className="message">{message}</h2>
+            </div>
           </div>
         </div>
         <div className="col-md-4 col-sm-12"></div>
