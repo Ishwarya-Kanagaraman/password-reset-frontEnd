@@ -9,9 +9,11 @@ export default function ForgotPassword() {
        email
      }
      console.log(user)
-     fetch("https://password-reset-my-server.herokuapp.com/forgot-password", {
+     fetch("http://localhost:8080/forgot-password",{
+    //  fetch("https://password-reset-my-server.herokuapp.com/forgot-password", {
         method: "POST",
         headers: {
+          "Access-control-allow-origin":"*",
           "Content-Type": "application/json"
         },
         body: JSON.stringify(user)
@@ -39,21 +41,6 @@ export default function ForgotPassword() {
                 </td>
               </div>
             </div>
-            {/* <div className="row">
-              <div  className="col-md-6 col-sm-12">
-              <th>
-                  <label htmlFor="FirstName">
-                    <h3>Password:</h3>
-                  </label>
-                </th>
-              </div>
-              <div className="col-md-6 col-sm-12">
-              <td>
-                  {" "}
-                  <input  onInput={(e)=>setNewPassword(e.target.value)}type="password" />
-                </td>
-              </div>
-            </div> */}
             <div className="row">
                 <div className="col-md-2 col-sm-12"></div>
                 <div className="col-md-8 col-sm-12">

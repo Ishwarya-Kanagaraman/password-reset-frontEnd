@@ -16,17 +16,21 @@ export default function Register() {
       mobileNo
     }
     console.log(createUser);
-    fetch('https://password-reset-my-server.herokuapp.com/signup',
+    fetch('http://localhost:8080/signup',
+    // fetch('https://password-reset-my-server.herokuapp.com/signup',
     { 
       method:"POST",
       headers:{
+        "Access-control-allow-origin":"*",
+        // "Accept":"application/json",
         "Content-type":"application/json",
       },
       body:JSON.stringify(createUser)
     })
     .then(res=>res.json())
+    // .then(res=>res.status===402 ? console.log(res.message):console.log('success'))
     .then(res=>console.log(res,res.message))
-    window.alert('Registration success. Please check the  Email  to activate your account.')
+    // .then(window.alert('Registration success. Please check the  Email  to activate your account.'))
   
   
   }

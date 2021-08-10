@@ -7,11 +7,12 @@ export default function ResetPassword() {
     
    const handleReset=()=>{
     const userData={
-      
+        
         newPassword
     }
     console.log(userData)
-     fetch("https://password-reset-my-server.herokuapp.com/reset-password/:token", {
+    fetch("http://localhost:8080/reset-password/:resetToken", {
+    //  fetch("https://password-reset-my-server.herokuapp.com/reset-password/:resetToken", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -25,6 +26,7 @@ export default function ResetPassword() {
         <div className="container-fluid">
         <div className="row">
           <div className="col-md-8 col-sm-12 form">
+         
             <div className="row">
               <div  className="col-md-6 col-sm-12">
               <th>

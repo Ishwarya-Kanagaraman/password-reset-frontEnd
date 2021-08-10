@@ -27,7 +27,7 @@ function App() {
      <Route path="/forgot-password">
      <ForgotPassword/>
      </Route>
-     <Route exact path="/reset-password/:token">
+     <Route exact path="/reset-password/:resetToken">
      <ResetPassword/>
      </Route>
     </div>
