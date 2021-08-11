@@ -17,8 +17,8 @@ export default function Register() {
       mobileNo
     }
     console.log(createUser);
-    fetch('http://localhost:8080/signup',
-    // fetch('https://password-reset-my-server.herokuapp.com/signup',
+    // fetch('http://localhost:8080/signup',
+    fetch('https://password-reset-my-server.herokuapp.com/signup',
     { 
       method:"POST",
       headers:{

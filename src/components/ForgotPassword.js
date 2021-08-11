@@ -9,8 +9,8 @@ export default function ForgotPassword() {
        email
      }
      console.log(user)
-     fetch("http://localhost:8080/forgot-password",{
-    //  fetch("https://password-reset-my-server.herokuapp.com/forgot-password", {
+    //  fetch("http://localhost:8080/forgot-password",{
+     fetch("https://password-reset-my-server.herokuapp.com/forgot-password", {
         method: "POST",
         headers: {
           "Access-control-allow-origin":"*",

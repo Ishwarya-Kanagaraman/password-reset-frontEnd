@@ -11,7 +11,7 @@ export default function Register() {
      password
    }
    console.log(user)
-   fetch('http:localhost:8080/login')
+  //  fetch('http://localhost:8080/login',{
    fetch("https://password-reset-my-server.herokuapp.com/login", {
     method: "POST",
     headers: {
