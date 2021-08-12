@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Route } from 'react-router-dom';
+import { Route,Switch } from 'react-router-dom';
 import Navbar from "./components/Navbar"
 import Home from './components/Home';
 // import Verify from './components/Verify';
@@ -12,6 +12,7 @@ function App() {
   return (
     <div className="App">
      <Navbar/>
+     <Switch>
      <Route exact path="/">
        <Home/>
      </Route>
@@ -30,6 +31,8 @@ function App() {
      <Route exact path="/reset-password/:resetToken">
      <ResetPassword/>
      </Route>
+     </Switch>
+     
     </div>
   );
 }
