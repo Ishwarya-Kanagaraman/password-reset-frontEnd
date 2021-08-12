@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams ,Link} from "react-router-dom";
 
 import "./register.css";
 export default function ResetPassword() {
@@ -65,6 +65,13 @@ export default function ResetPassword() {
             <div className="col-sm-12 col-md-12">
               <h2 className="message">{message}</h2>
             </div>
+          </div>
+          <div className="row">
+          
+              <div className="col-md-12 col-sm-12">
+                  <Link className="loginLink" to="/login"> Login </Link>
+              </div>
+              
           </div>
         </div>
         <div className="col-md-4 col-sm-12"></div>
